@@ -1,7 +1,241 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Jol jol</h1>
-<p>Co tam jak tam</p>
-</body>
-</html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@monteyszef</title>
+    <meta name="description" content="My BioLink powered by discord.gg/fazerp">
+    <link rel="icon" type="image/x-icon" href="https://i.imgur.com/ArS4glh.gif">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/ArS4glh.gif">
+      <meta property="og:url" content="http://fazerp.eu/mOntey">
+      <meta property="og:title" content="@mOntey | fazerp.eu">
+      <meta property="og:description" content="My BioLink powered by discord.gg/fazerp">
+      <meta property="og:image" content="https://i.imgur.com/ArS4glh.gif">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="theme-color" content="#42cef5">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <script>
+        window.onload = function() {
+            changeTitle(); 
+        };
+        const username = 'monteyszef';
+        const prefix = '@';
+        let currentIndex = 0;
+        let isAdding = true;
+    
+        function changeTitle() {
+            if (isAdding) {
+                if (currentIndex < username.length) {
+                    document.title = prefix + username.substring(0, currentIndex + 1);
+                    currentIndex++;
+                    setTimeout(changeTitle, 500);
+                } else {
+                    isAdding = false;
+                    setTimeout(changeTitle, 1000);
+                }
+            } else {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    document.title = prefix + username.substring(0, currentIndex);
+                    setTimeout(changeTitle, 500);
+                } else {
+                    isAdding = true;
+                    setTimeout(changeTitle, 1000);
+                }
+            }
+        }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <a href="#home" class="logo">mOntey</a>
+          <button class="menu-toggle" aria-label="Toggle Menu">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-links">
+            <li><a href="#home">Strona Główna</a></li>
+            <li><a href="#projekty">Projekty</a></li>
+            <li><a href="#about">O Mnie</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="glowne">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="main-content">
+            <h3>FiveM Developer</h3>
+            <h1>mOntey</h1>
+            <a href="#"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=25&duration=4000&pause=1000&center=true&width=435&lines=Witaj+na+Moim+Portfolio!" alt="Typing SVG" /></a>
+            <div class="glowne-buttons">
+              <a href="#projekty" class="btn btn-primary">Moje Projekty</a>
+              <a href="#kontakt" class="btn btn-MyKontakt">Kontakt Do Mnie</a>
+            </div>
+          </div>
+          <a href="#projekty" class="scroll-down" aria-label="Scroll down">
+            <i class="fas fa-arrow-down"></i>
+          </a>
+        </div>
+      </section>
+      <section id="projekty" class="projekty">
+        <div class="container">
+          <div class="section-header">
+            <h2>Moje Publiczne Projekty</h2>
+            <p>...</p>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-tag">
+                <i class="fas fa-code"></i>
+                <span>⭐Wyróżnione⭐</span>
+              </div>
+            </div>
+            <h3>System Bankowości</h3>
+            <p class="project-description">Projekt stworzony w ramach zadania szkolnego, będący prostym systemem bankowym napisanym w języku Java. Aplikacja umożliwia użytkownikom zarządzanie kontami bankowymi, wykonywanie przelewów oraz sprawdzanie salda.</p>
+            <p class="project-content">
+                <a href="https://github.com/mOnteySZEF/System-Bankowosci" target="_blank">https://github.com/mOnteySZEF/System-Bankowosci</a>
+            </p>
+            <div class="project-tags">
+                <span>Java</span>
+                <span>Console</span>
+              </div>
+          </div>
+
+          <div class="more-projects">
+            <p>Szukasz więcej projektów/skryptów?</p>
+            <a href="#kontakt">Wejdź na mój profil GitHub!</a>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="about">
+        <div class="container">
+          <div class="section-header">
+            <h2>O Mnie</h2>
+            <p>My name is Alan, I am a developer and I'm from Poland.<br>
+                I am the owner of a FiveM server, FazeRP [20k+ members]! 🏆<br>
+                Need help? Join my discord community! <a style="color: #97e6edc7; text-decoration: underline; transition: color 0.3s ease;" href="https://discord.gg/U4UMUFyCHH" target="_blank">https://discord.gg/U4UMUFyCHH</a>
+            </p>
+          </div>
+          <div class="about-cards">
+            <div class="about-card">
+              <h3>FazeRP</h3>
+              <p><em>soon</em>
+              </p>
+            </div>
+            <div class="about-card">
+              <h3>RifeBOT</h3>
+              <p><em>soon</em>
+              </p>
+            </div>
+          </div>
+          <h3 class="section-header">Statystyki</h3>          
+            <p align="center">
+                <a href="https://github.com/mOnteySZEF">
+                   <img alt="mOnteySZEF's GitHub Stats" src="https://denvercoder1-github-readme-stats.vercel.app/api?username=mOnteySZEF&show_icons=true&count_private=true&theme=react&border=61dafb&hide_border=true" height="172px"/>
+                </a>
+                <a href="https://github.com/mOnteySZEF">
+                   <img alt="mOnteySZEF's Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mOnteySZEF&langs_count=6&layout=compact&theme=react&hide_border=true&border_color=61dafb" height="172px"/>
+                </a>
+             </p>
+        </div>
+      </section>
+      <section id="kontakt" class="kontakt">
+        <div class="container">
+          <div class="section-header">
+            <h2>Bądź ze Mną w Kontakcie!</h2>
+            <p>Masz jakąś sprawę lub problem? Napisz do mnie!</p>
+          </div>
+
+          <div class="kontakt-container">
+            <div class="kontakt-form">
+                <h3>Wypełnij formularz</h3>
+                <form id="kontaktForm">
+                  <div class="form-group">
+                    <br>
+                    <label for="name">Nick</label>
+                    <input type="text" id="name" name="user_name" placeholder="Twój Nick" required>
+                  </div>
+              
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="user_email" placeholder="twojemail@email.com" required>
+                  </div>
+              
+                  <div class="form-group">
+                    <label for="message">Wiadomość</label>
+                    <textarea id="message" name="message" placeholder="Napisz swoją sprawę" required></textarea>
+                  </div>
+              
+                  <button type="submit" class="btn btn-primary btn-full">WYŚLIJ WIADOMOŚĆ!</button>
+                </form>
+              </div>
+              
+            
+            <div class="kontakt-info">
+              <div class="info">
+                <h3>Wyjątkowych sytuacjach skontaktuj się poprzez:</h3>
+                
+                <div class="info-item">
+                    <img class="logo-prof" src="https://i.imgur.com/KGDHnA2.gif">
+                  <div>
+                    <p class="info-title">E-mail</p>
+                    <p class="info-detail"><a href="mailto:monteyszef@gmail.com">monteyszef@gmail.com</a></p>
+                  </div>
+                </div>
+                
+                <div class="info-item">
+                <img class="logo-prof" src="https://i.imgur.com/KGDHnA2.gif">
+                  <div>
+                    <p class="info-title">Discord</p>
+                    <p class="info-detail"><a href="https://discord.com/users/775425961197043792" target="_blank">mOntey (monteyszef)</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-top">
+          <div></div><div></div>
+          <div class="footer-nav">
+            <a href="#home">Strona Główna</a>
+            <a href="#projekty">Projekty</a>
+            <a href="#about">O Mnie</a>
+            <a href="#kontakt">Kontakt</a>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/mOnteySZEF" target="_blank" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://instagram.com/monteyszef" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/@mOnteySZEF" target="_blank" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://discord.com/users/775425961197043792" target="_blank" aria-label="Discord">
+              <i class="fab fa-discord"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>Made with ❤️ | © 2025 Copyright</p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="js/script.js"></script>
+</body></html>
