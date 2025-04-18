@@ -291,7 +291,7 @@
     padding: 1.5rem;
     margin-bottom: 2rem;
     backdrop-filter: blur(12px);
-    width: 45%;
+    width: auto;
     height: 25%;
     box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.3);
     transition: border-color 0.3s ease;
